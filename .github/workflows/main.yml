@@ -13,6 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+
+      - name: Set execute permissions for Jest
+        run: chmod +x node_modules/.bin/jest
+
       - name: Run Tests
         run: |
           npm install 
