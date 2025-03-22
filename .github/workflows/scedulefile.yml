@@ -17,9 +17,9 @@ jobs:
     steps:  
       - name: wait for schedule time
         run: |
-            TARGET_TIME="07:50"
+            TARGET_TIME="07:55"
             while [ "$(date -u +"%H:%M")" != "$TARGET_TIME" ]; do
-            echo ""Waiting for $TARGET_TIME"
+            echo "Waiting for $TARGET_TIME"
             sleep 60
             done
             echo " $TARGET_TIME , running the pipeline now..."
