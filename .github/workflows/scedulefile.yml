@@ -22,7 +22,7 @@ jobs:
             echo ""Waiting for $TARGET_TIME"
             sleep 60
             done
-            echo "It's $TARGET_TIME , running the pipeline now..."
+            echo " $TARGET_TIME , running the pipeline now..."
 
       - name: Run workflow
         run: echo "Pipeline runs successfully at scheduled time"      
