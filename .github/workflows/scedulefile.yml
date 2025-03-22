@@ -17,8 +17,8 @@ jobs:
     steps:  
       - name: wait for schedule time
         run: |
-            TARGET_TIME="07:55"
-            while [ "$(date -u +"%H:%M")" != "$TARGET_TIME" ]; do
+            TARGET_TIME="10:15"
+            while [ "$(date +"%H:%M")" != "$TARGET_TIME" ]; do
             echo "Waiting for $TARGET_TIME"
             sleep 60
             done
