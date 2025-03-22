@@ -3,7 +3,6 @@ name: Conditional Scheduled Pipeline
 on:
   push:
     branches:
-      - main
       - master
   
 jobs:
