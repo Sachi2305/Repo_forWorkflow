@@ -20,5 +20,7 @@ jobs:
           (crontab -l 2>/dev/null; echo "$NEW_CRON") | crontab -
 
       - name: Show Updated Crontab
-        run: crontab -l
+        run: |
+             crontab -l
+             cat ~/dummy-cron.log
 
