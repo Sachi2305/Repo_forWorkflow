@@ -1,9 +1,9 @@
 name: Simulate Dummy Cron on Push
 
 on:
-  push:
-    branches:
-      - master
+  #push:
+   # branches:
+    #  - master
   workflow_dispatch:  
 
 jobs:
