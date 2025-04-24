@@ -16,8 +16,13 @@ jobs:
 
       - name: Simulate Dummy Cron Task
         run: |
-          NEW_CRON='11 37 * * * echo "Dummy cron executed at 7 PM" >> ~/dummy-cron.log'
+          NEW_CRON='0 19 * * * echo "Dummy cron executed at 7 PM" >> ~/dummy-cron.log'
           (crontab -l 2>/dev/null; echo "$NEW_CRON") | crontab -
+          echo "Cron job added!"
+
+      - name: Simulate Cron Execution Immediately
+        run: |
+          echo "Dummy cron executed at 7 PM" >> ~/dummy-cron.log    
 
       - name: Show Updated Crontab
         run: |
