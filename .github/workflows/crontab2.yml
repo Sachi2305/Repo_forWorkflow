@@ -4,11 +4,13 @@ on:
   push:
 
 jobs:
-  update-crontab:
+  setup-cron:
     runs-on: ubuntu-latest
     steps:
-      - name: Update crontab
+      - name: Create and install cron job
         run: |
-          crontab -e
-          0 19 * * * echo "Dummy cron executed at 7 PM" >> ~/dummy-cron2.log
-          echo "Cron job added!"
+          echo "* * * * * echo 'Running cron job...' >> ~/cron-test.log" > mycron
+          crontab mycron
+          sudo service cron start
+          echo "Cron job added:"
+          crontab -l
