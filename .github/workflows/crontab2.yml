@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Create and install cron job
         run: |
-          echo "* * * * * echo 'Running cron job...' >> ~/cron-test.log" > mycron
+          echo "0 19 * * * echo 'Running cron job...' >> ~/cron-test.log" > mycron
           crontab mycron
           sudo service cron start
           echo "Cron job added:"
