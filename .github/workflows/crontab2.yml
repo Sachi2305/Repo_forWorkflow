@@ -1,7 +1,8 @@
 name: Update crontab on push
 
 on:
-  push:
+  #push:
+  workflow_dispatch:
 
 jobs:
   setup-cron:
