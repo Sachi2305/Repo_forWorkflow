@@ -16,7 +16,7 @@ jobs:
 
       - name: Add cron job on remote server
         run: |
-          ssh sachi@ 172.23.75.112 '(
+          ssh sachi@172.23.75.112 '(
           crontab -l 2>/dev/null;
           echo "0 19 * * * echo "cron runs" >> /var/log/my-cron.log"
           ) | crontab -'
